@@ -51,6 +51,7 @@ cursor = connection.cursor()
 # Create users table within MySQL db and populate with sample data
 # Execute the code below only once.
 # Write sql code for initializing users table..
+
 drop_table = 'DROP TABLE IF EXISTS users;'
 users_table = """
 CREATE TABLE users (
@@ -126,7 +127,7 @@ def emails():
         return render_template('emails.html', show_result=False)
 
 # Write a function named `add_email` which inserts new email to the database using `GET` and `POST` methods,
-# using template files named `add-email.html` given under `templates` folder
+# using template files named `add-email.html` given under `templates` folder.
 # and assign to the static route of ('add')
 @app.route('/add', methods=['GET', 'POST'])
 def add_email():

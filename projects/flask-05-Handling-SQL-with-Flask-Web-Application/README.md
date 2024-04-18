@@ -132,4 +132,3 @@ https://sqlitebrowser.org/)
 
 - Run application with Python
 
-

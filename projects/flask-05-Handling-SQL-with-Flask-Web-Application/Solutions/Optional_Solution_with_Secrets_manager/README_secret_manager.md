@@ -1,7 +1,7 @@
 # Storing Database Credentials in AWS Secrets Manager.
 
 
-Purpose of the this hands-on training is to show how to store database credentials securely via AWS Secrets Manager.
+Purpose of the this hands-on training is to show how to store database credentials securely via AWS Secrets Manager
  
 
 ## Learning Outcomes
