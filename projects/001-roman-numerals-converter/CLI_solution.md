@@ -84,7 +84,7 @@ python3 roman-numerals-converter-app.py
 - Now we can run the instance with CLI command. (Do not forget to create userdata.sh under "/home/ec2-user/" folder before run this command)
 
 ```bash
-aws ec2 run-instances --image-id $LATEST_AMI --count 1 --instance-type t2.micro --key-name ibrahim-keypem3 --security-groups roman_numbers_sec_grp1 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=roman_numbers}]' --user-data file:///Users/ODG/Desktop/git_dir/osvaldo-cw/porfolio_lesson_plan/week_6/CLI_solution/userdata.sh
+aws ec2 run-instances --image-id $LATEST_AMI --count 1 --instance-type t2.micro --key-name ibrahim-keypem3 --security-groups roman_numbers_sec_grp1 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=roman_numbers}]' --user-data /Users/admin/Desktop/aws-projects/projects/001-roman-numerals-converter/userdata.sh
 
 or
 
@@ -93,9 +93,10 @@ aws ec2 run-instances \
     --count 1 \
     --instance-type t2.micro \
     --key-name ibrahim-keypem3 \
-    --security-groups roman_numbers_sec_grp1 \
+    --security-groups ibrahim_roman_numbers_sec_grp1 \
+    --GroupId: sg-001c97561fbe61c49
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=roman_numbers}]'\
-    --user-data file:///home/ec2-user/userdata.sh
+    --user-data /home/ec2-user/userdata.sh
 ```
 
 - To see the each instances Ip we'll use describe instance CLI command
